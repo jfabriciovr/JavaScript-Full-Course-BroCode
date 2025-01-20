@@ -5,6 +5,7 @@ body {
 form {
   background-color: white;
   max-width: 400px;
+  height: 320px;
   margin: auto;
   text-align: center;
   padding: 20px;
@@ -27,4 +28,9 @@ button {
   font-size: 1.2em;
   padding: 10px 15px;
   border-radius: 10px;
+}
+
+#result {
+  margin: 30px auto;
+  font-size: 2em;
 }
