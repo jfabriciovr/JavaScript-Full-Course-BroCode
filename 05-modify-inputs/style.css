@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+section {
+  margin: 30px;
+  border: 1px dashed;
+  padding: 30px;
+}
+
+#telNumResult {
+  font-weight: bolder;
+}
+#firstNameResult {
+  font-weight: bolder;
+}
+#lastNameResult {
+  font-weight: bolder;
+}
