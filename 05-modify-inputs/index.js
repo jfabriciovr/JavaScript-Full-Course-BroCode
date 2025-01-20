@@ -7,14 +7,18 @@ const fullNameBtn = document.getElementById("fullNameBtn");
 const firstNameResult = document.getElementById("firstNameResult");
 const lastNameResult = document.getElementById("lastNameResult");
 
+const emailBtn = document.getElementById("emailBtn");
+const emailId = document.getElementById("emailId");
+const emailServer = document.getElementById("emailServer");
+
 // acción de botones
-document.getElementById("telNumBtn").onclick = function () {
+telNumBtn.onclick = function () {
   const telNumInput = document.getElementById("telNumInput").value;
   const nuevoTel = telNumInput.replaceAll("-", "");
   telNumResult.textContent = nuevoTel;
 };
 
-document.getElementById("fullNameBtn").onclick = function () {
+fullNameBtn.onclick = function () {
   const fullNameInput = document.getElementById("fullNameInput").value;
   // split the full name into parts
   const nameParts = fullNameInput.trim().split(" ");
@@ -28,4 +32,12 @@ document.getElementById("fullNameBtn").onclick = function () {
 
   firstNameResult.textContent = firstName;
   lastNameResult.textContent = lastName;
+};
+
+emailBtn.onclick = function () {
+  const emailInput = document.getElementById("emailInput").value;
+  let userName = emailInput.slice(0, emailInput.indexOf("@"));
+  let extension = emailInput.slice(emailInput.indexOf("@") + 1);
+  emailId.textContent = userName;
+  emailServer.textContent = extension;
 };
