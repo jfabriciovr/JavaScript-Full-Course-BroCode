@@ -3,6 +3,12 @@
 const generateBtn = document.getElementById("generateBtn");
 const passwordDisplay = document.getElementById("passwordDisplay");
 
+const includeLowercase = document.getElementById("lowercaseChk").checked;
+const includeUppercase = document.getElementById("uppercaseChk").checked;
+const includeNumbers = document.getElementById("numbersChk").checked;
+const includeSymbols = document.getElementById("symbolsChk").checked;
+const passwordLength = document.getElementById("lenghChk").value;
+
 function generatePassword(
   passwordLength,
   includeLowercase,
@@ -41,12 +47,6 @@ function generatePassword(
 }
 
 generateBtn.onclick = function () {
-  const passwordLength = 12;
-  const includeLowercase = true;
-  const includeUppercase = true;
-  const includeNumbers = true;
-  const includeSymbols = true;
-
   const password = generatePassword(
     passwordLength,
     includeLowercase,

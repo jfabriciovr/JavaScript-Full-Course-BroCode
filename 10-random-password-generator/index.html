@@ -11,6 +11,41 @@
 <body>
 
     <h1>Random Password Generator</h1>
+    <p>Include:</p>
+    <section class="includeOptions">
+        <input type="checkbox" name="includeOptions" id="lowercaseChk" checked>
+        <label for="lowercaseChk">Lowercase</label>
+
+        <br>
+
+        <input type="checkbox" name="includeOptions" id="uppercaseChk" checked>
+        <label for="uppercaseChk">Uppercase</label>
+
+        <br>
+
+        <input type="checkbox" name="includeOptions" id="numbersChk" checked>
+        <label for="numbersChk">Numbers</label>
+
+        <br>
+
+        <input type="checkbox" name="includeOptions" id="symbolsChk" checked>
+        <label for="symbolsChk">Symbols</label>
+
+        <br>
+        <br>
+
+        <!-- <label for="rangeChk" min="8" max="20">Lenght:</label><br>
+        <input type="range" name="" id="rangeChk">
+        <br> -->
+
+        <label for="lenghChk">Lenght: </label>
+        <input type="number" min="4" max="20" value=12 name="" id="lenghChk">
+
+
+    </section>
+
+
+
     <button id="generateBtn">Generate</button>
     <section class="passwordBox">
         <span id="passwordDisplay">Password</span>
