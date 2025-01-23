@@ -35,7 +35,7 @@ generateBtn.onclick = function () {
   }
 };
 
-passwordBox.onclick = function () {
+passwordDisplay.onclick = function () {
   const password = passwordDisplay.textContent;
   navigator.clipboard.writeText(password).then(() => {
     copyMessage.style.display = "block";
