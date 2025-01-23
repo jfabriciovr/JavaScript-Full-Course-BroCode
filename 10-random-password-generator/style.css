@@ -40,3 +40,24 @@ button:hover {
 #passwordLength:hover {
   background-color: hsl(169, 90%, 60%);
 }
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  transition: color 0.3s;
+}
+
+input[type="checkbox"] + label:hover {
+  color: hsl(215, 90%, 60%);
+}
+
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+  background-color: hsl(169, 90%, 60%);
+}
+
+input[type="checkbox"]:checked + label:hover {
+  background-color: hsl(69, 90%, 60%);
+}
