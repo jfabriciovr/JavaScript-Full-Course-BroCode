@@ -3,11 +3,36 @@
 const generateBtn = document.getElementById("generateBtn");
 const passwordDisplay = document.getElementById("passwordDisplay");
 
-const includeLowercase = document.getElementById("lowercaseChk").checked;
-const includeUppercase = document.getElementById("uppercaseChk").checked;
-const includeNumbers = document.getElementById("numbersChk").checked;
-const includeSymbols = document.getElementById("symbolsChk").checked;
-const passwordLength = document.getElementById("lenghChk").value;
+generateBtn.onclick = function () {
+  // gettin the length of the password based on the number input
+  const passwordLength = document.getElementById("passwordLength").value;
+
+  // obtain true of false depending if the checkboxes are checked or un checked
+  const includeLowercase = document.getElementById("includeLowercase").checked;
+  const includeUppercase = document.getElementById("includeUppercase").checked;
+  const includeNumbers = document.getElementById("includeNumbers").checked;
+  const includeSymbols = document.getElementById("includeSymbols").checked;
+
+  if (
+    includeLowercase == false &&
+    includeUppercase == false &&
+    includeNumbers == false &&
+    includeSymbols == false
+  ) {
+    passwordDisplay.textContent = "Try again!, Include_ at least one category";
+  } else {
+    const password = generatePassword(
+      passwordLength,
+      includeLowercase,
+      includeUppercase,
+      includeNumbers,
+      includeSymbols
+    );
+
+    // Displaying the password
+    passwordDisplay.textContent = password;
+  }
+};
 
 function generatePassword(
   passwordLength,
@@ -45,15 +70,3 @@ function generatePassword(
   }
   return password;
 }
-
-generateBtn.onclick = function () {
-  const password = generatePassword(
-    passwordLength,
-    includeLowercase,
-    includeUppercase,
-    includeNumbers,
-    includeSymbols
-  );
-  //console.log(`Generated password: ${password}`);
-  passwordDisplay.textContent = password;
-};
