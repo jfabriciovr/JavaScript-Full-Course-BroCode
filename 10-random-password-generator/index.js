@@ -2,6 +2,7 @@
 
 const generateBtn = document.getElementById("generateBtn");
 const passwordDisplay = document.getElementById("passwordDisplay");
+const copyMessage = document.getElementById("copyMessage");
 
 generateBtn.onclick = function () {
   // gettin the length of the password based on the number input
@@ -32,6 +33,16 @@ generateBtn.onclick = function () {
     // Displaying the password
     passwordDisplay.textContent = password;
   }
+};
+
+passwordBox.onclick = function () {
+  const password = passwordDisplay.textContent;
+  navigator.clipboard.writeText(password).then(() => {
+    copyMessage.style.display = "block";
+    setTimeout(() => {
+      copyMessage.style.display = "none";
+    }, 2000);
+  });
 };
 
 function generatePassword(

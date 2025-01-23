@@ -61,3 +61,8 @@ input[type="checkbox"]:checked + label {
 input[type="checkbox"]:checked + label:hover {
   background-color: hsl(69, 90%, 60%);
 }
+
+/* #copyMessage{
+  color: hsl(169, 90%, 60%);
+  font-weight: bold;
+} */
