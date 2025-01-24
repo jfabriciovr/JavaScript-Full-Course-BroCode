@@ -3,10 +3,16 @@
 const generateBtn = document.getElementById("generateBtn");
 const passwordDisplay = document.getElementById("passwordDisplay");
 const copyMessage = document.getElementById("copyMessage");
+const passwordLengthInput = document.getElementById("passwordLength");
+const passwordLengthValue = document.getElementById("passwordLengthValue");
+
+passwordLengthInput.oninput = function () {
+  passwordLengthValue.textContent = passwordLengthInput.value;
+};
 
 generateBtn.onclick = function () {
   // gettin the length of the password based on the number input
-  const passwordLength = document.getElementById("passwordLength").value;
+  const passwordLength = passwordLengthInput.value;
 
   // obtain true of false depending if the checkboxes are checked or un checked
   const includeLowercase = document.getElementById("includeLowercase").checked;
@@ -41,7 +47,7 @@ passwordDisplay.onclick = function () {
     copyMessage.style.display = "block";
     setTimeout(() => {
       copyMessage.style.display = "none";
-    }, 2000);
+    }, 4000);
   });
 };
 
