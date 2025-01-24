@@ -3,7 +3,7 @@
 const passwordDisplay = document.getElementById("passwordDisplay");
 const copyMessage = document.getElementById("copyMessage");
 const passwordLengthInput = document.getElementById("passwordLength");
-const passwordLengthValue = document.getElementById("passwordLengthValue");
+const rangeValue = document.getElementById("rangeValue");
 
 const includeLowercase = document.getElementById("includeLowercase");
 const includeUppercase = document.getElementById("includeUppercase");
@@ -11,7 +11,12 @@ const includeNumbers = document.getElementById("includeNumbers");
 const includeSymbols = document.getElementById("includeSymbols");
 
 passwordLengthInput.oninput = function () {
-  passwordLengthValue.textContent = passwordLengthInput.value;
+  rangeValue.textContent = passwordLengthInput.value;
+  const value =
+    ((passwordLengthInput.value - passwordLengthInput.min) /
+      (passwordLengthInput.max - passwordLengthInput.min)) *
+    100;
+  rangeValue.style.left = `calc(${value}% + (${8 - value * 0.15}px))`;
   generateAndDisplayPassword();
 };
 
@@ -23,10 +28,12 @@ includeSymbols.onchange = generateAndDisplayPassword;
 passwordDisplay.onclick = function () {
   const password = passwordDisplay.textContent;
   navigator.clipboard.writeText(password).then(() => {
-    copyMessage.style.display = "block";
+    //copyMessage.style.display = "block";
+    copyMessage.textContent = "Copied to clipboard!";
     setTimeout(() => {
-      copyMessage.style.display = "none";
-    }, 4000);
+      // copyMessage.style.display = "none";
+      copyMessage.textContent = "Clic the password to copy!";
+    }, 3000);
   });
 };
 

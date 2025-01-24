@@ -13,8 +13,10 @@
     <h2>Random Password Generator</h2>
 
     <label for="passwordLength">Length_</label> <br> <br>
-    <input type="range" min="4" max="20" value="12" step="1" id="passwordLength">
-    <span id="passwordLengthValue">12</span>
+    <div class="range-container">
+        <input type="range" min="4" max="20" value="12" step="1" id="passwordLength">
+        <div class="range-value" id="rangeValue">12</div>
+    </div>
 
     <p>Include_</p>
 
@@ -39,7 +41,8 @@
     <section class="passwordBox" id="passwordBox">
         <span id="passwordDisplay">P@55w#rd_123</span>
     </section>
-    <p id="copyMessage" style="display: none;">Copied!</p>
+    <p id="copyMessage">Clic the password to copy!</p>
+
 
     <script src="index.js"></script>
 
