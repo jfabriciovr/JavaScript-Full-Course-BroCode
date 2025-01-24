@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Random Password Generator</h2>
+
+    <label for="passwordLength">Length_</label> <br> <br>
+    <input type="range" min="4" max="20" value="12" step="1" id="passwordLength">
+    <span id="passwordLengthValue">12</span>
+
+    <p>Include_</p>
+
+    <section class="includeOptions">
+        <!-- Lowercase checkbox -->
+        <input type="checkbox" name="includeOptions" id="includeLowercase" checked>
+        <label for="includeLowercase">lowercase</label>
+        <br>
+        <!-- Upercase checkbox -->
+        <input type="checkbox" name="includeOptions" id="includeUppercase" checked>
+        <label for="includeUppercase">UPPERCASE</label>
+        <br>
+        <!-- Numbers checkbox -->
+        <input type="checkbox" name="includeOptions" id="includeNumbers" checked>
+        <label for="includeNumbers">Numb3r5</label>
+        <br>
+        <!-- Symbols checkbox -->
+        <input type="checkbox" name="includeOptions" id="includeSymbols" checked>
+        <label for="includeSymbols">$ymb@ls</label>
+    </section>
+
+    <section class="passwordBox" id="passwordBox">
+        <span id="passwordDisplay">P@55w#rd_123</span>
+    </section>
+    <p id="copyMessage" style="display: none;">Copied!</p>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
