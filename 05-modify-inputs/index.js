@@ -36,8 +36,8 @@ fullNameBtn.onclick = function () {
 
 emailBtn.onclick = function () {
   const emailInput = document.getElementById("emailInput").value;
-  let userName = emailInput.slice(0, emailInput.indexOf("@"));
-  let extension = emailInput.slice(emailInput.indexOf("@") + 1);
+  let userName = emailInput.slice(0, emailInput.indexOf("@")); // get the username
+  let extension = emailInput.slice(emailInput.indexOf("@") + 1); // get the extension
   emailId.textContent = userName;
   emailServer.textContent = extension;
 };
