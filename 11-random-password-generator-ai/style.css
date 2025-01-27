@@ -10,7 +10,11 @@ h2 {
   margin-bottom: 20px;
   color: hsl(169, 90%, 60%);
 }
-
+.author {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 29%);
+  margin-top: -20px;
+}
 .range-container {
   position: relative;
   width: 100%;
