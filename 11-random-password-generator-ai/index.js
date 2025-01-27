@@ -2,6 +2,7 @@
 
 const passwordDisplay = document.getElementById("passwordDisplay");
 const copyMessage = document.getElementById("copyMessage");
+const copiedMessage = document.getElementById("copiedMessage");
 const passwordLengthInput = document.getElementById("passwordLength");
 const rangeValue = document.getElementById("rangeValue");
 
@@ -29,11 +30,13 @@ passwordDisplay.onclick = function () {
   const password = passwordDisplay.textContent;
   navigator.clipboard.writeText(password).then(() => {
     //copyMessage.style.display = "block";
-    copyMessage.textContent = "Copied to clipboard!";
+    // copyMessage.textContent = "Copied to clipboard!";
+    copiedMessage.style.display = "block";
     setTimeout(() => {
       // copyMessage.style.display = "none";
-      copyMessage.textContent = "Clic the password to copy!";
-    }, 3000);
+      // copyMessage.textContent = "Clic the password to copy!";
+      copiedMessage.style.display = "none";
+    }, 1500);
   });
 };
 
@@ -51,7 +54,7 @@ function generateAndDisplayPassword() {
     !includeNumbersChecked &&
     !includeSymbolsChecked
   ) {
-    passwordDisplay.textContent = "Try again!, Include_ at least one category";
+    passwordDisplay.textContent = "Include_ at least one category";
   } else {
     const password = generatePassword(
       passwordLength,
