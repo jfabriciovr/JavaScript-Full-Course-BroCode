@@ -19,10 +19,17 @@ h2 {
 .sectionTitle {
   font-size: 1rem;
   color: hsl(169, 90%, 60%);
+  display: block;
+}
+.lengthTitle {
   margin-top: 40px;
+}
+.includeTitle {
+  margin-top: 80px;
 }
 .range-container {
   position: relative;
+  top: 50px;
   width: 100%;
   max-width: 400px;
   /* margin: 20px 0; */
@@ -47,8 +54,8 @@ h2 {
 #passwordLength::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background: hsl(0, 0%, 40%);
   cursor: pointer;
 }
@@ -62,7 +69,7 @@ h2 {
 
 .range-value {
   position: absolute;
-  top: -7px;
+  top: -18px;
   left: 50%;
   transform: translateX(-50%);
   color: hsl(0, 0%, 99%);
@@ -74,7 +81,8 @@ h2 {
 }
 
 .includeOptions {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  /* margin-top: 80px; */
   display: flex;
   justify-content: center;
 }
@@ -135,11 +143,13 @@ input[type="checkbox"]:not(checked) + label::before {
   margin-left: auto;
   margin-right: auto; */
   margin: auto;
+  margin-top: 50px;
   font-weight: bold;
   padding: 10px 10px;
   width: fit-content;
   font-size: 1em;
   background-color: hsl(69, 90%, 60%);
+  /* background-color: hsl(310, 90%, 60%); */
   color: hsl(0, 0%, 0%);
 }
 #passwordDisplay:hover {
