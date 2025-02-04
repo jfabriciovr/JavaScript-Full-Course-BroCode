@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Gen v0 fab</title>
+</head>
+
+<body>
+    <section class="title-container">
+        <h1 class="title-text">Password Gen. V0 fab</h1>
+        <span class="title-author-name">by Fabricio Villalobos</span>
+    </section>
+
+    <form action="">
+        <label for="password-length-input">Length_</label>
+        <input id="password-length-input" type="range" min="4" max="20" value="12">
+
+        <label for="lowercase-checkbox">lowercase</label>
+        <input id="lowercase-checkbox" type="checkbox" name="checkbox-inputs" checked>
+
+        <label for="uppercase-checkbox">UPPERCASE</label>
+        <input id="uppercase-checkbox" type="checkbox" name="checkbox-inputs" checked>
+
+        <label for="numbers-checkbox">Numb3r5</label>
+        <input id="numbers-checkbox" type="checkbox" name="checkbox-inputs" checked>
+
+        <label for="symbols-checkbox">$ymb@ls</label>
+        <input id="symbols-checkbox" type="checkbox" name="checkbox-inputs" checked>
+    </form>
+
+
+    <div class="password-display-container">
+        <span id="password-display-text">P@55w#rd_123</span>
+    </div>
+
+    <div class="copy-password-container">
+        <p id="copy-password-text">Click the password above to copy!</p>
+        <p id="copy-password-confirmation" style="display: none;">"Copied to clipboard!"</p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
