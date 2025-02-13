@@ -29,12 +29,8 @@ includeSymbols.onchange = generateAndDisplayPassword;
 passwordDisplay.onclick = function () {
   const password = passwordDisplay.textContent;
   navigator.clipboard.writeText(password).then(() => {
-    //copyMessage.style.display = "block";
-    // copyMessage.textContent = "Copied to clipboard!";
     copiedMessage.style.display = "block";
     setTimeout(() => {
-      // copyMessage.style.display = "none";
-      // copyMessage.textContent = "Clic the password to copy!";
       copiedMessage.style.display = "none";
     }, 1500);
   });
