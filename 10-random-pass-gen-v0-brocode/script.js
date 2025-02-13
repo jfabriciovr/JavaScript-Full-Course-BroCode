@@ -74,5 +74,6 @@ const password = generatePassword(
   includeSymbols
 );
 
-// display the resulting password in the console
-console.log(`Generated password: ${password}`);
+// display the resulting password
+// console.log(`Generated password: ${password}`);
+document.getElementById("password").innerHTML = password;
