@@ -12,7 +12,8 @@ button {
 }
 
 button:hover {
-  background-color: hsl(169, 90%, 60%);
+  background-color: hsl(165, 20%, 92%);
+  cursor: pointer;
 }
 
 .passwordBox {
@@ -69,4 +70,14 @@ input[type="checkbox"]:not(:checked) + label {
 #copyMessage {
   color: hsl(169, 90%, 60%);
   font-weight: bold;
+}
+
+#passwordDisplay:hover {
+  cursor: pointer;
+  color: hsl(215, 90%, 60%);
+}
+
+.clic-to-copy-message {
+  font-size: 0.6rem;
+  opacity: 50%;
 }
