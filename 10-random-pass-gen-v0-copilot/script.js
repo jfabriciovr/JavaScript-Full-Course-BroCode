@@ -21,10 +21,14 @@ document.getElementById("copy").addEventListener("click", function () {
   const password = document.querySelector("p").textContent;
   navigator.clipboard.writeText(password).then(
     function () {
-      alert("Password copied to clipboard");
+      document.getElementById("copy-alert").textContent =
+        "Password copied to clipboard!";
+      // alert("Password copied to clipboard");
     },
     function () {
-      alert("Failed to copy password");
+      document.getElementById("copy-alert").textContent =
+        "Failed to copy password!";
+      // alert("Failed to copy password");
     }
   );
 });
